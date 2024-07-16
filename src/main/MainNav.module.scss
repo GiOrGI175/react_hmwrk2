@@ -1,0 +1,9 @@
+.MainNav {
+  ul {
+    display: flex;
+
+    li:not(:first-child) {
+      margin-left: 33px;
+    }
+  }
+}
