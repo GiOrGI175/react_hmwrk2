@@ -1,25 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Header.module.scss';
 import HeaderNav from './Headernav';
 import sun from '/sun.svg';
 import moon from '/moon.svg';
 
-const Header = ({ islight }, { setISlight }, { darkMode }) => {
-  console.log(islight);
+const Header = ({ islight }) => {
+  const [Islight, setISlight] = useState(islight);
 
-  console.log(setISlight);
-
-  // console.log(updateBgClr);
-
-  // const [islight, setISlight] = useState(false);
-
-  // const darkMode = () => {
-  //   setISlight((perv) => !perv);
-  // };
+  function darkMode() {
+    setISlight((perv) => !perv);
+  }
 
   const updateBgClr = () => {
     return {
-      backgroundColor: islight ? '#DBDBDB' : '#222222',
+      backgroundColor: Islight ? '#DBDBDB' : '#222222',
     };
   };
 
@@ -27,9 +21,9 @@ const Header = ({ islight }, { setISlight }, { darkMode }) => {
     <header style={updateBgClr()}>
       <div className={style.header_container}>
         <div className={style.header_content}>
-          <HeaderNav islight={islight} />
+          <HeaderNav Islight={Islight} />
           <div className={style.ImgBox} onClick={darkMode}>
-            <img src={islight ? moon : sun} alt='light Mode' />
+            <img src={Islight ? moon : sun} alt='light Mode' />
           </div>
         </div>
       </div>

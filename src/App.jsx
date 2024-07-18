@@ -7,23 +7,9 @@ import LanguageSection from './section/Languagesection';
 const App = () => {
   const [islight, setISlight] = useState(false);
 
-  function darkMode() {
-    setISlight((perv) => !perv);
-  }
-
-  //   const updateBgClr = () => {
-  //     return {
-  //       backgroundColor: islight ? '#DBDBDB' : '#222222',
-  //     };
-  //   };
   return (
     <>
-      <Header
-        islight={islight}
-        setISlight={setISlight}
-        darkMode={darkMode}
-        // updateBgClr={updateBgClr()}
-      />
+      <Header islight={islight} />
       <Main />
       <LanguageSection />
     </>

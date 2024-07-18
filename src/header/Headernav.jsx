@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './HeaderNav.module.scss';
 
-const HeaderNav = ({ islight }) => {
+const HeaderNav = ({ Islight }) => {
   const updateTxtClr = () => {
     return {
-      color: islight ? '#455174CC' : '#ffffffcc',
+      color: Islight ? '#455174CC' : '#ffffffcc',
     };
   };
 
