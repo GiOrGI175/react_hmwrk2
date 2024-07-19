@@ -3,9 +3,17 @@ import style from './Main.module.scss';
 import MainNav from './Mainnav';
 import boy from '/boy.webp';
 
-const Main = () => {
+const Main = ({ islight, setISlight }) => {
+  // console.log(`mainis ${islight}`);
+
+  const updateBgClr = () => {
+    return {
+      backgroundColor: islight ? '#DBDBDB' : '#222222',
+    };
+  };
+
   return (
-    <main>
+    <main style={updateBgClr()}>
       <div className={style.main_container}>
         <div className={style.main_content}>
           <div className={style.text_contnet}>

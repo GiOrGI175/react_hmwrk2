@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './Header.module.scss';
 import HeaderNav from './Headernav';
 import sun from '/sun.svg';
@@ -7,12 +7,10 @@ import moon from '/moon.svg';
 const Header = ({ islight, setISlight }) => {
   // const [Islight, setISlight] = useState(islight);
 
-  // console.log(`headeris ${Islight}`);
+  console.log(`headeris ${islight}`);
 
   function darkMode() {
     setISlight((perv) => !perv);
-
-    console.log(`appis ganxlebuli ${islight}`);
   }
 
   const updateBgClr = () => {

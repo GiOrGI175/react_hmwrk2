@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <Header islight={islight} setISlight={setISlight} />
-      <Main />
+      <Main islight={islight} setISlight={setISlight} />
       <LanguageSection />
     </>
   );
