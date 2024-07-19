@@ -7,9 +7,11 @@ import LanguageSection from './section/Languagesection';
 const App = () => {
   const [islight, setISlight] = useState(false);
 
+  console.log(`appis ${islight}`);
+
   return (
     <>
-      <Header islight={islight} />
+      <Header islight={islight} setISlight={setISlight} />
       <Main />
       <LanguageSection />
     </>

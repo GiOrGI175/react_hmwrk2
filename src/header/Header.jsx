@@ -4,16 +4,20 @@ import HeaderNav from './Headernav';
 import sun from '/sun.svg';
 import moon from '/moon.svg';
 
-const Header = ({ islight }) => {
-  const [Islight, setISlight] = useState(islight);
+const Header = ({ islight, setISlight }) => {
+  // const [Islight, setISlight] = useState(islight);
+
+  // console.log(`headeris ${Islight}`);
 
   function darkMode() {
     setISlight((perv) => !perv);
+
+    console.log(`appis ganxlebuli ${islight}`);
   }
 
   const updateBgClr = () => {
     return {
-      backgroundColor: Islight ? '#DBDBDB' : '#222222',
+      backgroundColor: islight ? '#DBDBDB' : '#222222',
     };
   };
 
@@ -21,9 +25,9 @@ const Header = ({ islight }) => {
     <header style={updateBgClr()}>
       <div className={style.header_container}>
         <div className={style.header_content}>
-          <HeaderNav Islight={Islight} />
+          <HeaderNav Islight={islight} />
           <div className={style.ImgBox} onClick={darkMode}>
-            <img src={Islight ? moon : sun} alt='light Mode' />
+            <img src={islight ? moon : sun} alt='light Mode' />
           </div>
         </div>
       </div>
