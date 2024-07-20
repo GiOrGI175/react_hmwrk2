@@ -5,8 +5,6 @@ import sun from '/sun.svg';
 import moon from '/moon.svg';
 
 const Header = ({ islight, setISlight }) => {
-  // const [Islight, setISlight] = useState(islight);
-
   console.log(`headeris ${islight}`);
 
   function darkMode() {
@@ -16,6 +14,9 @@ const Header = ({ islight, setISlight }) => {
   const updateBgClr = () => {
     return {
       backgroundColor: islight ? '#DBDBDB' : '#222222',
+      boxShadow: islight
+        ? '0px 0px 10.05px 0px #0000001A'
+        : '0px 0px 10.05px 0px #ffffff1a',
     };
   };
 
@@ -29,6 +30,7 @@ const Header = ({ islight, setISlight }) => {
           </div>
         </div>
       </div>
+      <div className={style.underline}></div>
     </header>
   );
 };

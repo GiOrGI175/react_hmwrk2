@@ -1,6 +1,7 @@
 body {
-  background-color: #222222;
   main {
+    background-color: #222222;
+    transition: all 0.5s ease;
     .main_container {
       max-width: 1440px;
       margin: 0 auto;
@@ -22,6 +23,7 @@ body {
             line-height: 69.2px;
             text-align: left;
             color: #ffffff;
+            transition: all 0.5s ease;
             span {
               margin-right: 50px;
             }
@@ -69,6 +71,7 @@ body {
           justify-content: center;
           align-items: center;
           border: 1px solid #a6bcfa;
+
           img {
             width: 368px;
             height: 456px;

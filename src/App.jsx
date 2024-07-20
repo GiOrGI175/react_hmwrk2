@@ -5,7 +5,7 @@ import Main from './main/Main';
 import LanguageSection from './section/Languagesection';
 
 const App = () => {
-  const [islight, setISlight] = useState(false);
+  const [islight, setISlight] = useState(true);
 
   console.log(`appis ${islight}`);
 
@@ -13,7 +13,7 @@ const App = () => {
     <>
       <Header islight={islight} setISlight={setISlight} />
       <Main islight={islight} setISlight={setISlight} />
-      <LanguageSection />
+      <LanguageSection islight={islight} />
     </>
   );
 };

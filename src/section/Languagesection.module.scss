@@ -1,5 +1,7 @@
 body {
   .section_1 {
+    background-color: #222222;
+    transition: all 0.5s ease;
     .section_1_container {
       max-width: 1440px;
       margin: 0 auto;
@@ -16,6 +18,7 @@ body {
             }
             li {
               width: 161px;
+              // height: 91px;
               height: 91px;
               border-radius: 24px;
               position: relative;
@@ -24,11 +27,13 @@ body {
               justify-content: end;
               align-items: center;
               background-color: #455174;
+              transition: all 0.5s ease;
               img {
                 border: 8px solid #222222;
                 border-radius: 50%;
                 position: absolute;
                 top: -40%;
+                transition: all 0.5s ease;
               }
               a {
                 margin-bottom: 19px;
